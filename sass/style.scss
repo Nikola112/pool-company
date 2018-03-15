@@ -17,6 +17,14 @@ body, input, textarea
     color: $text-color;
 }
 
+#main-navigation
+{
+    box-shadow: 0px 1px 2px grey;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
 
 .navbar
 {
@@ -27,12 +35,37 @@ body, input, textarea
         top: 72px;
         left: 0px;
         width: 36.67%;
+        @include transition(left 0.3s);
     }
+
+    .hide
+    {
+        left: -38%;
+    }
+}
+
+.nav-item
+{
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#main-nav
+{
+    background-color: #fff;
+    box-shadow: 2px 0px 8px grey;
+    height: 3000px;
 }
 
 // desktop
 @media screen and (min-width: 992px)
 {
+    #main-navigation
+    {
+        position: static;
+    }
+
     .navbar
     {
         position: relative;
@@ -42,5 +75,19 @@ body, input, textarea
             width: auto;
             height: 72px;
         }
+    }
+
+    .nav-item
+    {
+        width: auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    #main-nav
+    {
+        background-color: transparent;
+        box-shadow: none;
+        height: auto;
     }
 }

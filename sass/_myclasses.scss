@@ -169,11 +169,6 @@ ul.nav
     flex-direction: column;
 }
 
-.nav-item
-{
-    text-align: center;
-}
-
 .navbar
 {
     @extend %flex-wrap;
@@ -212,14 +207,9 @@ ul.nav
         align-items: flex-start;
         width: 100%;
 
-        .nav-item
-        {
-            padding: 0px 0.5rem;
-        }
-
         .link
         {
-            color: $highlight-color;
+            color: $primary-color;
             padding-left: 0px;
             padding-right: 0px;
             text-transform: uppercase;
@@ -227,9 +217,25 @@ ul.nav
 
             &:hover
             {
-                color: $primary-color;
+                color: $highlight-color;
                 text-decoration: underline;
             }
+        }
+
+        .active
+        {
+            background-color: $primary-color;
+
+            .link
+            {
+                color: $text-color;
+            }
+        }
+
+        .nav-item
+        {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
         }
     }
 
@@ -251,11 +257,6 @@ ul.nav
 // tablets
 @media screen and (min-width: 768px)
 {
-    .container
-    {
-        width: 768px;
-    }
-
     .d-sm-none
     {
         display: none;
@@ -296,6 +297,11 @@ ul.nav
         flex-direction: row;
     }
 
+    .nav-item
+    {
+        text-align: center;
+    }
+
     .navbar
     {
         .toggle-btn
@@ -308,6 +314,26 @@ ul.nav
             flex-direction: row;
             align-items: flex-start;
             width: auto;
+
+            .link
+            {
+                color: $highlight-color;
+
+                &:hover
+                {
+                    color: $primary-color;
+                }
+            }
+
+            .active
+            {
+                background-color: transparent;
+
+                .link
+                {
+                    color: $primary-color;
+                }
+            }
         }
     }
 

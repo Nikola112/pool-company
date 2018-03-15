@@ -430,10 +430,6 @@ ul.nav {
   flex-direction: column;
 }
 
-.nav-item {
-  text-align: center;
-}
-
 .navbar {
   width: 100%;
 }
@@ -464,19 +460,26 @@ ul.nav {
   align-items: flex-start;
   width: 100%;
 }
-.navbar .nav .nav-item {
-  padding: 0px 0.5rem;
-}
 .navbar .nav .link {
-  color: #495867;
+  color: #228cdb;
   padding-left: 0px;
   padding-right: 0px;
   text-transform: uppercase;
   font-weight: bold;
 }
 .navbar .nav .link:hover {
-  color: #228cdb;
+  color: #495867;
   text-decoration: underline;
+}
+.navbar .nav .active {
+  background-color: #228cdb;
+}
+.navbar .nav .active .link {
+  color: #fcfcfc;
+}
+.navbar .nav .nav-item {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .navbar .navbar-logo {
   display: inline-block;
@@ -490,10 +493,6 @@ ul.nav {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-
   .d-sm-none {
     display: none;
   }
@@ -531,6 +530,10 @@ ul.nav {
     flex-direction: row;
   }
 
+  .nav-item {
+    text-align: center;
+  }
+
   .navbar .toggle-btn {
     display: none;
   }
@@ -538,6 +541,18 @@ ul.nav {
     flex-direction: row;
     align-items: flex-start;
     width: auto;
+  }
+  .navbar .nav .link {
+    color: #495867;
+  }
+  .navbar .nav .link:hover {
+    color: #228cdb;
+  }
+  .navbar .nav .active {
+    background-color: transparent;
+  }
+  .navbar .nav .active .link {
+    color: #228cdb;
   }
 
   .d-lg-none {
@@ -584,6 +599,14 @@ body, input, textarea {
   color: #fcfcfc;
 }
 
+#main-navigation {
+  box-shadow: 0px 1px 2px grey;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
 .navbar {
   position: relative;
 }
@@ -592,9 +615,32 @@ body, input, textarea {
   top: 72px;
   left: 0px;
   width: 36.67%;
+  -moz-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
+}
+.navbar .hide {
+  left: -38%;
+}
+
+.nav-item {
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#main-nav {
+  background-color: #fff;
+  box-shadow: 2px 0px 8px grey;
+  height: 3000px;
 }
 
 @media screen and (min-width: 992px) {
+  #main-navigation {
+    position: static;
+  }
+
   .navbar {
     position: relative;
   }
@@ -602,6 +648,18 @@ body, input, textarea {
     position: static;
     width: auto;
     height: 72px;
+  }
+
+  .nav-item {
+    width: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  #main-nav {
+    background-color: transparent;
+    box-shadow: none;
+    height: auto;
   }
 }
 
