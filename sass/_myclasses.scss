@@ -55,22 +55,6 @@ $cell-names: (full, half, third, quarter);
     }
 }
 
-// without $zero variable Visual Studio Code shows error
-// SCSS IntelliSense problem
-$zero: 0;
-@each $side in $sides
-{
-    .m#{str-slice($side, 0, 1)}-#{$zero}
-    {
-        margin-#{$side}: 0px;
-    }
-
-    .p#{str-slice($side, 0, 1)}-#{$zero}
-    {
-        padding-#{$side}: 0px;
-    }
-}
-
 .mx-auto
 {
     margin-left: auto;
@@ -87,19 +71,40 @@ $zero: 0;
     margin-right: auto;
 }
 
+// without $zero variable Visual Studio Code shows error
+// SCSS IntelliSense problem
+$zero: 0;
+@each $side in $sides
+{
+    .m#{str-slice($side, 0, 1)}-#{$zero}
+    {
+        margin-#{$side}: 0px;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$zero}
+    {
+        padding-#{$side}: 0px;
+    }
+}
+
 .d-none
 {
-    display: none;
+    display: none !important;
 }
 
 .d-block
 {
-    display: block;
+    display: block !important;
 }
 
 .d-inblock
 {
-    display: inline-block;
+    display: inline-block !important;
+}
+
+.d-flex
+{
+    display: flex !important;
 }
 
 .container
@@ -241,13 +246,20 @@ ul.nav
 
     .navbar-logo
     {
-        display: inline-block;
+        display: flex;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+        color: $highlight-color;
+
+        span
+        {
+            display: block;
+        }
 
         & img
         {
+            display: block;
             max-width: 100%;
             height: auto;
         }
@@ -259,17 +271,22 @@ ul.nav
 {
     .d-sm-none
     {
-        display: none;
+        display: none !important;
     }
 
     .d-sm-block
     {
-        display: block;
+        display: block !important;
     }
 
     .d-sm-inblock
     {
-        display: inline-block;
+        display: inline-block !important;
+    }
+
+    .d-sm-flex
+    {
+        display: flex !important;
     }
 
     $count: 1;
@@ -339,17 +356,22 @@ ul.nav
 
     .d-lg-none
     {
-        display: none;
+        display: none !important;
     }
 
     .d-lg-block
     {
-        display: block;
+        display: block !important;
     }
 
     .d-lg-inblock
     {
-        display: inline-block;
+        display: inline-block !important;
+    }
+
+    .d-lg-flex
+    {
+        display: flex !important;
     }
 
     $count: 1;
