@@ -1,0 +1,347 @@
+@import "palette";
+@import "placeholders";
+@import "mixins";
+
+$sides: (top, bottom, left, right);
+$cell-names: (full, half, third, quarter);
+
+@for $i from 1 through 5
+{
+    .m-#{$i}
+    {
+        margin: #{$i / 2}rem;
+    }
+
+    .p-#{$i}
+    {
+        padding: #{$i / 2}rem;
+    }
+
+    .mx-#{$i}
+    {
+        margin-left: #{$i / 2}rem;
+        margin-right: #{$i / 2}rem;
+    }
+
+    .my-#{$i}
+    {
+        margin-top: #{$i / 2}rem;
+        margin-bottom: #{$i / 2}rem;
+    }
+
+    .px-#{$i}
+    {
+        padding-left: #{$i / 2}rem;
+        padding-right: #{$i / 2}rem;
+    }
+
+    .py-#{$i}
+    {
+        padding-top: #{$i / 2}rem;
+        padding-bottom: #{$i / 2}rem;
+    }
+
+    @each $side in $sides
+    {
+        .m#{str-slice($side, 0, 1)}-#{$i}
+        {
+            margin-#{$side}: #{$i / 2}rem;
+        }
+
+        .p#{str-slice($side, 0, 1)}-#{$i}
+        {
+            padding-#{$side}: #{$i / 2}rem;
+        }
+    }
+}
+
+// without $zero variable Visual Studio Code shows error
+// SCSS IntelliSense problem
+$zero: 0;
+@each $side in $sides
+{
+    .m#{str-slice($side, 0, 1)}-#{$zero}
+    {
+        margin-#{$side}: 0px;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$zero}
+    {
+        padding-#{$side}: 0px;
+    }
+}
+
+.mx-auto
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ml-auto
+{
+    margin-left: auto;
+}
+
+.mr-auto
+{
+    margin-right: auto;
+}
+
+.d-none
+{
+    display: none;
+}
+
+.d-block
+{
+    display: block;
+}
+
+.d-inblock
+{
+    display: inline-block;
+}
+
+.container
+{
+    width: 100%;
+    margin: 0px auto;
+}
+
+.row
+{
+    @extend %flex-wrap;
+    width: 100%;
+}
+
+$count: 1;
+@each $name in $cell-names
+{
+    .cell-#{$name}
+    {
+        width: 100% / $count;
+    }
+
+    $count: $count + 1;
+}
+
+.w-100
+{
+    width: 100%;
+}
+
+.img-responsive
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.text-uppercase
+{
+    text-transform: uppercase;
+}
+
+.link
+{
+    display: block;
+    padding: 0.5rem 1rem;
+    color: $primary-color;
+    text-decoration: none;
+    @include transition(color 0.3s);
+}
+
+.link:hover
+{
+    color: $highlight-color;
+}
+
+ul.nav
+{
+    list-style: none;
+}
+
+.nav
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav-item
+{
+    text-align: center;
+}
+
+.navbar
+{
+    @extend %flex-wrap;
+    width: 100%;
+
+    .toggle-btn
+    {
+        border: 0px none;
+        background-color: transparent;
+        padding: 1rem;
+        width: 4.5rem;
+        text-align: center;
+        
+        .fa
+        {
+            color: $secondary-color;
+            @include transition(color 0.3s);
+            font-size: 2.5rem;
+        }
+
+        &:focus, &:hover
+        {
+            box-shadow: none;
+            outline: none;
+
+            & .fa
+            {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .nav
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        .nav-item
+        {
+            padding: 0px 0.5rem;
+        }
+
+        .link
+        {
+            color: $highlight-color;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            &:hover
+            {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .navbar-logo
+    {
+        display: inline-block;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 2.5rem;
+
+        & img
+        {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// tablets
+@media screen and (min-width: 768px)
+{
+    .container
+    {
+        width: 768px;
+    }
+
+    .d-sm-none
+    {
+        display: none;
+    }
+
+    .d-sm-block
+    {
+        display: block;
+    }
+
+    .d-sm-inblock
+    {
+        display: inline-block;
+    }
+
+    $count: 1;
+    @each $name in $cell-names
+    {
+        .cell-sm-#{$name}
+        {
+            width: 100% / $count;
+        }
+
+        $count: $count + 1;
+    }
+}
+
+// desktop
+@media screen and (min-width: 992px)
+{
+    .container
+    {
+        width: 992px;
+    }
+
+    .nav
+    {
+        flex-direction: row;
+    }
+
+    .navbar
+    {
+        .toggle-btn
+        {
+            display: none;
+        }
+
+        .nav
+        {
+            flex-direction: row;
+            align-items: flex-start;
+            width: auto;
+        }
+    }
+
+    .d-lg-none
+    {
+        display: none;
+    }
+
+    .d-lg-block
+    {
+        display: block;
+    }
+
+    .d-lg-inblock
+    {
+        display: inline-block;
+    }
+
+    $count: 1;
+    @each $name in $cell-names
+    {
+        .cell-lg-#{$name}
+        {
+            width: 100% / $count;
+        }
+
+        $count: $count + 1;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    .container
+    {
+        width: 1200px;
+    }
+}

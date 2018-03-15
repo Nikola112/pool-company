@@ -1,0 +1,46 @@
+@import "palette";
+@import "placeholders";
+@import "myclasses";
+
+// site specific
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, input, textarea
+{
+    font-family: "Ubuntu", sans-serif;
+    color: $text-color;
+}
+
+
+.navbar
+{
+    position: relative;
+    .nav
+    {
+        position: absolute;
+        top: 72px;
+        left: 0px;
+        width: 36.67%;
+    }
+}
+
+// desktop
+@media screen and (min-width: 992px)
+{
+    .navbar
+    {
+        position: relative;
+        .nav
+        {
+            position: static;
+            width: auto;
+            height: 72px;
+        }
+    }
+}
