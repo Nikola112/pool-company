@@ -673,6 +673,7 @@ a {
 
 #cover {
   position: relative;
+  overflow: hidden;
 }
 
 #cover-content {
@@ -690,7 +691,8 @@ a {
 }
 
 .cover-img {
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .contact-btn {
