@@ -611,6 +611,10 @@ ul.nav {
     width: 1200px;
   }
 }
+html {
+  font-size: 12px;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -620,6 +624,7 @@ ul.nav {
 body, input, textarea {
   font-family: "Ubuntu", sans-serif;
   color: #fcfcfc;
+  font-size: 16px;
 }
 
 a {
@@ -645,13 +650,20 @@ a {
 }
 .navbar .nav {
   position: absolute;
-  top: 74px;
+  top: 80px;
   left: 0px;
   width: 36.67%;
   -moz-transition: left 0.3s ease;
   -o-transition: left 0.3s ease;
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
+}
+.navbar .navbar-logo {
+  margin-left: auto;
+  padding-right: 1.5rem;
+}
+.navbar .navbar-logo span {
+  line-height: 64px;
 }
 .navbar .hide {
   left: -38%;
@@ -696,6 +708,11 @@ a {
 #cover-content p {
   max-width: 65%;
   line-height: 1.75rem;
+  font-size: 1rem;
+}
+
+#cover-content h1 {
+  font-size: 2rem;
 }
 
 .big-text {
@@ -709,7 +726,7 @@ a {
 }
 
 .contact-btn {
-  background: linear-gradient(to right, #3e31ee, #47c2f3);
+  background: linear-gradient(to right, #1d2cfd, #47c2f3);
   border-radius: 6px;
   text-align: center;
   padding: 1.25rem;
@@ -725,8 +742,15 @@ a {
 .contact-btn a {
   color: #fff;
 }
+.contact-btn:hover {
+  box-shadow: 0px 0px 1rem #649aff;
+}
 
 @media screen and (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+
   #main-navigation {
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
     height: 170px;
@@ -759,6 +783,10 @@ a {
     height: 72px;
     margin-left: auto;
     align-items: center;
+  }
+  .navbar .navbar-logo {
+    margin-left: 0px;
+    padding-right: 0px;
   }
   .navbar .navbar-logo span {
     line-height: 154px;

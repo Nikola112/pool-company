@@ -4,6 +4,11 @@
 
 // site specific
 
+html
+{
+    font-size: 12px;
+}
+
 *
 {
     margin: 0px;
@@ -15,6 +20,7 @@ body, input, textarea
 {
     font-family: "Ubuntu", sans-serif;
     color: $text-color;
+    font-size: 16px;
 }
 
 a
@@ -40,10 +46,20 @@ a
     .nav
     {
         position: absolute;
-        top: 74px;
+        top: 80px;
         left: 0px;
         width: 36.67%;
         @include transition(left 0.3s ease);
+    }
+
+    .navbar-logo
+    {
+        margin-left: auto;
+        padding-right: 1.5rem;
+        span
+        {
+            line-height: 64px;
+        }
     }
 
     .hide
@@ -100,9 +116,15 @@ a
 {
     max-width: 65%;
     line-height: 1.75rem;
+    font-size: 1rem;
     //text-shadow: 0px 0px 2px #000;
     //background-color: rgba(0, 0, 0, 0.05);
     //background: radial-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+}
+
+#cover-content h1
+{
+    font-size: 2rem;
 }
 
 .big-text
@@ -119,7 +141,7 @@ a
 
 .contact-btn
 {
-    background: linear-gradient(to right,#3e31ee, #47c2f3);
+    background: linear-gradient(to right,#1d2cfd, #47c2f3);
     border-radius: 6px;
     text-align: center;
     padding: 1.25rem;
@@ -136,11 +158,21 @@ a
     {
         color: #fff;
     }
+
+    &:hover
+    {
+        box-shadow: 0px 0px 1rem rgb(100, 154, 255);
+    }
 }
 
 // desktop
 @media screen and (min-width: 992px)
 {
+    html
+    {
+        font-size: 16px;
+    }
+
     #main-navigation
     {
         background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
@@ -188,6 +220,9 @@ a
 
         .navbar-logo
         {
+            margin-left: 0px;
+            padding-right: 0px;
+
             span
             {
                 line-height: 154px;
