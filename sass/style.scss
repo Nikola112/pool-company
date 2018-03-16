@@ -29,7 +29,7 @@ a
     top: 0px;
     left: 0px;
     width: 100%;
-    @include transition(top 0.3s);
+    @include transition(top 0.3s ease);
     z-index: 1000;
     background-color: #fff;
 }
@@ -43,7 +43,7 @@ a
         top: 74px;
         left: 0px;
         width: 36.67%;
-        @include transition(left 0.3s);
+        @include transition(left 0.3s ease);
     }
 
     .hide
@@ -57,6 +57,7 @@ a
     width: 100%;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    border-radius: 2px;
 }
 
 #main-nav
@@ -144,7 +145,7 @@ a
         background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
         height: 170px;
         box-shadow: none;
-        @include transition(height 0.7s, background 0.7s);
+        @include transition(height 0.5s ease, background 0.7s ease);
 
         .container
         {
@@ -189,7 +190,7 @@ a
             span
             {
                 line-height: 154px;
-                @include transition(line-height 0.7s);
+                @include transition(line-height 0.5s ease);
             }
 
             img

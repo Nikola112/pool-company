@@ -31,8 +31,8 @@ $(document).ready(function()
 
         if(resetTransition)
         {
-            main_navigation.css('transition','height 0.7s, background 0.7s');
-            main_navigation.find("#logo-text").css('transition','line-height 0.7s');
+            main_navigation.css('transition','height 0.5s ease, background 0.5s ease');
+            main_navigation.find("#logo-text").css('transition','line-height 0.5s ease');
             resetTransition = false;
         }
     }, 100);

@@ -632,10 +632,10 @@ a {
   top: 0px;
   left: 0px;
   width: 100%;
-  -moz-transition: top 0.3s;
-  -o-transition: top 0.3s;
-  -webkit-transition: top 0.3s;
-  transition: top 0.3s;
+  -moz-transition: top 0.3s ease;
+  -o-transition: top 0.3s ease;
+  -webkit-transition: top 0.3s ease;
+  transition: top 0.3s ease;
   z-index: 1000;
   background-color: #fff;
 }
@@ -648,10 +648,10 @@ a {
   top: 74px;
   left: 0px;
   width: 36.67%;
-  -moz-transition: left 0.3s;
-  -o-transition: left 0.3s;
-  -webkit-transition: left 0.3s;
-  transition: left 0.3s;
+  -moz-transition: left 0.3s ease;
+  -o-transition: left 0.3s ease;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
 }
 .navbar .hide {
   left: -38%;
@@ -661,6 +661,7 @@ a {
   width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  border-radius: 2px;
 }
 
 #main-nav {
@@ -729,10 +730,10 @@ a {
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
     height: 170px;
     box-shadow: none;
-    -moz-transition: height 0.7s, background 0.7s;
-    -o-transition: height 0.7s, background 0.7s;
-    -webkit-transition: height 0.7s, background 0.7s;
-    transition: height 0.7s, background 0.7s;
+    -moz-transition: height 0.5s ease, background 0.7s ease;
+    -o-transition: height 0.5s ease, background 0.7s ease;
+    -webkit-transition: height 0.5s ease, background 0.7s ease;
+    transition: height 0.5s ease, background 0.7s ease;
   }
   #main-navigation .container {
     height: 100%;
@@ -760,10 +761,10 @@ a {
   }
   .navbar .navbar-logo span {
     line-height: 154px;
-    -moz-transition: line-height 0.7s;
-    -o-transition: line-height 0.7s;
-    -webkit-transition: line-height 0.7s;
-    transition: line-height 0.7s;
+    -moz-transition: line-height 0.5s ease;
+    -o-transition: line-height 0.5s ease;
+    -webkit-transition: line-height 0.5s ease;
+    transition: line-height 0.5s ease;
   }
   .navbar .navbar-logo img {
     max-width: 100%;
