@@ -371,7 +371,8 @@
 
 .container {
   width: 100%;
-  margin: 0px auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .row {
@@ -625,6 +626,7 @@ body, input, textarea {
   font-family: "Ubuntu", sans-serif;
   color: #fcfcfc;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -742,8 +744,52 @@ a {
 .contact-btn a {
   color: #fff;
 }
-.contact-btn:hover {
-  box-shadow: 0px 0px 1rem #649aff;
+
+.number-circle {
+  min-width: 128px;
+  height: 128px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 40px;
+  padding: 40px 0px;
+  color: rgba(101, 137, 151, 0.33);
+  border: 4px solid rgba(101, 137, 151, 0.33);
+  border-radius: 50%;
+  -moz-transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  -o-transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  -webkit-transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+.number-circle:hover {
+  border: 4px solid #228cdb;
+  background-color: #228cdb;
+  color: #fff;
+}
+
+.info {
+  display: flex;
+}
+
+.info-text {
+  padding: 0px 1rem;
+  margin-left: 1rem;
+}
+.info-text h3 {
+  margin-bottom: 1rem;
+  color: #228cdb;
+  font-size: 1.45rem;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.info-text h3:hover {
+  color: #495867;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.info-text p {
+  color: #5d7da7;
 }
 
 @media screen and (min-width: 768px) {

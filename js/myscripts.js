@@ -18,15 +18,13 @@ $(document).ready(function()
     {
         if (didScroll)
         {
-            if($(window).width() > 992)
-            {
-                hasScrolledDesktop();
-            }
-            else
+            if($(window).width() < 991.98)
             {
                 hasScrolled();
                 didScroll = false;
             }
+
+            hasScrolledDesktop();
         }
 
         if(resetTransition)
