@@ -694,7 +694,8 @@ a {
 }
 
 #cover-content p {
-  max-width: 70%;
+  max-width: 65%;
+  line-height: 1.75rem;
 }
 
 .big-text {
