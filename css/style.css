@@ -631,6 +631,7 @@ a {
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
   z-index: 1000;
+  background-color: #fff;
 }
 
 .navbar {
