@@ -24,7 +24,7 @@ a
 
 #main-navigation
 {
-    box-shadow: 0px 1px 2px grey;
+    box-shadow: 0px 1px 2px #808080;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -75,6 +75,7 @@ a
 {
     padding-top: 72px;
     width: 100%;
+    // TODO: Delete height
     height: 3000px;;
 }
 
@@ -100,6 +101,12 @@ a
     text-shadow: 0px 0px 8px #000;
     //background-color: rgba(0, 0, 0, 0.05);
     //background: radial-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+}
+
+.big-text
+{
+    font-size: 1.75rem;
+    font-weight: bold;
 }
 
 .cover-img
@@ -134,12 +141,39 @@ a
 {
     #main-navigation
     {
-        position: static;
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+        height: 170px;
+        box-shadow: none;
+        @include transition(height 0.7s, background 0.7s);
+
+        .container
+        {
+            height: 100%;
+        }
+    }
+
+    #main-navigation.white
+    {
+        height: 80px;
+        background: #fff;
+        box-shadow: 0px 1px 2px #808080;
+
+        .navbar
+        {
+            .navbar-logo
+            {
+                span
+                {
+                    line-height: 64px;
+                }
+            }
+        }
     }
 
     .navbar
     {
         position: relative;
+        height: 100%;
 
         .nav
         {
@@ -154,7 +188,13 @@ a
         {
             span
             {
-                line-height: 64px;
+                line-height: 154px;
+                @include transition(line-height 0.7s);
+            }
+
+            img
+            {
+                max-width: 100%;
             }
         }
     }

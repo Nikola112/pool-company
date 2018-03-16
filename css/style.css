@@ -495,10 +495,16 @@ ul.nav {
 .navbar .navbar-logo span {
   display: block;
 }
+.navbar .navbar-logo .logo-img-holder {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .navbar .navbar-logo img {
-  display: block;
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -621,7 +627,7 @@ a {
 }
 
 #main-navigation {
-  box-shadow: 0px 1px 2px grey;
+  box-shadow: 0px 1px 2px #808080;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -692,6 +698,11 @@ a {
   text-shadow: 0px 0px 8px #000;
 }
 
+.big-text {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
 .cover-img {
   min-width: 100%;
   min-height: 100%;
@@ -717,11 +728,30 @@ a {
 
 @media screen and (min-width: 992px) {
   #main-navigation {
-    position: static;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    height: 170px;
+    box-shadow: none;
+    -moz-transition: height 0.7s, background 0.7s;
+    -o-transition: height 0.7s, background 0.7s;
+    -webkit-transition: height 0.7s, background 0.7s;
+    transition: height 0.7s, background 0.7s;
+  }
+  #main-navigation .container {
+    height: 100%;
+  }
+
+  #main-navigation.white {
+    height: 80px;
+    background: #fff;
+    box-shadow: 0px 1px 2px #808080;
+  }
+  #main-navigation.white .navbar .navbar-logo span {
+    line-height: 64px;
   }
 
   .navbar {
     position: relative;
+    height: 100%;
   }
   .navbar .nav {
     position: static;
@@ -731,7 +761,14 @@ a {
     align-items: center;
   }
   .navbar .navbar-logo span {
-    line-height: 64px;
+    line-height: 154px;
+    -moz-transition: line-height 0.7s;
+    -o-transition: line-height 0.7s;
+    -webkit-transition: line-height 0.7s;
+    transition: line-height 0.7s;
+  }
+  .navbar .navbar-logo img {
+    max-width: 100%;
   }
 
   .nav-item {

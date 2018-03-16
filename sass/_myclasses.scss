@@ -257,11 +257,19 @@ ul.nav
             display: block;
         }
 
+        .logo-img-holder
+        {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
         & img
         {
-            display: block;
             max-width: 100%;
-            height: auto;
+            max-height: 100%;
         }
     }
 }

@@ -4,6 +4,7 @@ $(document).ready(function()
     var main_nav = main_navigation.find("#main-nav");
 
     var didScroll;
+    var resetTransition;
     var lastScrollTop = 0;
     var delta = 50;
     var navbarHeight = main_navigation.outerHeight();
@@ -15,12 +16,26 @@ $(document).ready(function()
 
     setInterval(function()
     {
-        if (didScroll && $(window).width() < 991.98)
+        if (didScroll)
         {
-            hasScrolled();
-            didScroll = false;
+            if($(window).width() > 992)
+            {
+                hasScrolledDesktop();
+            }
+            else
+            {
+                hasScrolled();
+                didScroll = false;
+            }
         }
-    }, 250);
+
+        if(resetTransition)
+        {
+            main_navigation.css('transition','height 0.7s, background 0.7s');
+            main_navigation.find("#logo-text").css('transition','line-height 0.7s');
+            resetTransition = false;
+        }
+    }, 100);
 
     function hasScrolled()
     {
@@ -39,6 +54,28 @@ $(document).ready(function()
         }
         
         lastScrollTop = st;
+    }
+
+    if($(this).scrollTop() > 2)
+    {
+        main_navigation.css('transition','none');
+        main_navigation.find("#logo-text").css('transition','none');
+        main_navigation.addClass("white");
+        resetTransition = true;
+    }
+
+    function hasScrolledDesktop()
+    {
+        var st = $(this).scrollTop();
+        
+        if(st < 2)
+        {
+            main_navigation.removeClass("white");
+        }
+        else
+        {
+            main_navigation.addClass("white");
+        }
     }
 
     $("#navbar-toggler").click(function()
