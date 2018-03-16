@@ -650,9 +650,9 @@ a {
 }
 .navbar .nav {
   position: absolute;
-  top: 80px;
+  top: 76px;
   left: 0px;
-  width: 36.67%;
+  width: 40%;
   -moz-transition: left 0.3s ease;
   -o-transition: left 0.3s ease;
   -webkit-transition: left 0.3s ease;
@@ -666,7 +666,7 @@ a {
   line-height: 64px;
 }
 .navbar .hide {
-  left: -38%;
+  left: -42%;
 }
 
 .nav-item {
@@ -746,6 +746,15 @@ a {
   box-shadow: 0px 0px 1rem #649aff;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .navbar .nav {
+    top: 78px;
+  }
+}
 @media screen and (min-width: 992px) {
   html {
     font-size: 16px;
