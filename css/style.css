@@ -854,6 +854,9 @@ h3:hover {
 .offer-overlay {
   position: relative;
 }
+.offer-overlay img {
+  display: block;
+}
 .offer-overlay .more-info {
   position: absolute;
   top: 0px;
