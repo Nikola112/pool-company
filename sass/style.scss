@@ -93,8 +93,6 @@ a
 {
     padding-top: 72px;
     width: 100%;
-    // TODO: Delete height
-    height: 3000px;;
 }
 
 #cover
@@ -187,6 +185,20 @@ a
     display: flex;
 }
 
+h3
+{
+    color: $text-color;
+    font-size: 1.25rem;
+    @include transition(color 0.3s);
+
+    &:hover
+    {
+        color: $highlight-color;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
 .info-text
 {
     padding: 0px 1rem;
@@ -197,13 +209,10 @@ a
         margin-bottom: 1rem;
         color: $primary-color;
         font-size: 1.45rem;
-        @include transition(color 0.3s);
 
         &:hover
         {
             color: $highlight-color;
-            text-decoration: underline;
-            cursor: pointer;
         }
     }
 
@@ -211,6 +220,27 @@ a
     {
         color: #5d7da7;
     }
+}
+
+.gradient
+{
+    background: linear-gradient($secondary-color, $primary-color);
+}
+
+.img-rounded
+{
+    padding: 0.75rem;
+}
+
+.img-rounded img
+{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#about-us h2
+{
+    font-size: 2rem;
 }
 
 // tablets
