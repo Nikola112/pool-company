@@ -158,6 +158,7 @@ $count: 1;
     padding: 0.5rem 1rem;
     color: $primary-color;
     text-decoration: none;
+    cursor: pointer;
     @include transition(color 0.3s);
 }
 

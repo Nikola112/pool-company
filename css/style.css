@@ -417,6 +417,7 @@
   padding: 0.5rem 1rem;
   color: #228cdb;
   text-decoration: none;
+  cursor: pointer;
   -moz-transition: color 0.3s;
   -o-transition: color 0.3s;
   -webkit-transition: color 0.3s;
@@ -758,6 +759,7 @@ a {
   color: rgba(101, 137, 151, 0.33);
   border: 4px solid rgba(101, 137, 151, 0.33);
   border-radius: 50%;
+  cursor: default;
   -moz-transition: border-color 0.3s, background-color 0.3s, color 0.3s;
   -o-transition: border-color 0.3s, background-color 0.3s, color 0.3s;
   -webkit-transition: border-color 0.3s, background-color 0.3s, color 0.3s;
@@ -845,6 +847,52 @@ h3:hover {
   cursor: pointer;
 }
 
+#best-offers h2 {
+  color: #495867;
+}
+
+.offer-overlay {
+  position: relative;
+}
+.offer-overlay .more-info {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.offer-overlay .more-info:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.offer-overlay .more-info:hover .more-info-btn {
+  display: block;
+}
+.offer-overlay .more-info .more-info-btn {
+  display: none;
+  position: relative;
+  margin: 0px auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  padding: 0.75rem;
+  text-align: center;
+  background-color: #386fa4;
+  -moz-transition: background-color 0.3s, box-shadow 0.3s;
+  -o-transition: background-color 0.3s, box-shadow 0.3s;
+  -webkit-transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.offer-overlay .more-info .more-info-btn:hover {
+  background: #228cdb;
+  box-shadow: 0px 0px 16px #e7ecef;
+}
+
 @media screen and (min-width: 768px) {
   html {
     font-size: 14px;
@@ -879,6 +927,10 @@ h3:hover {
   }
   #main-navigation.white .navbar .navbar-logo span {
     line-height: 64px;
+  }
+
+  #main-navigation.nav-up {
+    top: 0px;
   }
 
   .navbar {
