@@ -243,6 +243,41 @@ h3
     font-size: 2rem;
 }
 
+#services
+{
+    color: $highlight-color;
+
+    p
+    {
+        color: #5d7da7;
+    }
+
+    h3
+    {
+        color: $highlight-color;
+
+        &:hover
+        {
+            color: $primary-color;
+        }
+    }
+
+    .fa
+    {
+        font-size: 50px;
+        color: $secondary-color;
+        @include transition(color 0.3s);
+
+        &:hover
+        {
+            color: $primary-color;
+            cursor: pointer;
+        }
+    }
+
+
+}
+
 // tablets
 @media screen and (min-width: 768px)
 {

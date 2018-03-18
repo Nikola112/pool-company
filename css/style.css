@@ -820,6 +820,31 @@ h3:hover {
   font-size: 2rem;
 }
 
+#services {
+  color: #495867;
+}
+#services p {
+  color: #5d7da7;
+}
+#services h3 {
+  color: #495867;
+}
+#services h3:hover {
+  color: #228cdb;
+}
+#services .fa {
+  font-size: 50px;
+  color: #386fa4;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+#services .fa:hover {
+  color: #228cdb;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   html {
     font-size: 14px;
