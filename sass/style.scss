@@ -91,7 +91,7 @@ a
 
 #main
 {
-    padding-top: 72px;
+    padding-top: 76px;
     width: 100%;
 }
 
@@ -124,6 +124,11 @@ a
 #cover-content h1
 {
     font-size: 2rem;
+}
+
+.gallery #cover-content h1
+{
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
 }
 
 .big-text
@@ -431,10 +436,11 @@ h3
     #copyrights
     {
         border-top: 1px dashed rgba(166, 199, 214, 0.7);
-        color: #0059ff;
+        color: #fff;
         padding: 1rem;
         text-align: center;
         margin: 0px auto;
+        background: linear-gradient($secondary-color, $primary-color);
     }
 
     #newsletter
@@ -447,6 +453,11 @@ h3
             padding: 0.5rem;
         }
     }
+}
+
+.img-blur
+{
+    filter: blur(5px) contrast(120%);
 }
 
 // tablets
@@ -488,6 +499,24 @@ h3
     }
 
     #main-navigation.white
+    {
+        height: 80px;
+        background: #fff;
+        box-shadow: 0px 1px 2px #808080;
+
+        .navbar
+        {
+            .navbar-logo
+            {
+                span
+                {
+                    line-height: 64px;
+                }
+            }
+        }
+    }
+
+    #main-navigation.gallery
     {
         height: 80px;
         background: #fff;
@@ -559,6 +588,11 @@ h3
     #main
     {
         padding-top: 0px;
+    }
+
+    #main.gallery
+    {
+        padding-top: 80px;
     }
 
     #footer

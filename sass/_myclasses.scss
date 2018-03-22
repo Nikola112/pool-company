@@ -408,3 +408,11 @@ ul.nav
         width: 1200px;
     }
 }
+
+@media screen and (min-width: 1600px)
+{
+    .container
+    {
+        width: 1600px;
+    }
+}
