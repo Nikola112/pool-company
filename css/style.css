@@ -1015,7 +1015,7 @@ h3:hover {
 }
 .tabs li {
   position: relative;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 2px 2px 0px 0px;
 }
 .tabs li .w-100 {
   position: absolute;
@@ -1052,8 +1052,11 @@ h3:hover {
   padding: 2rem;
   padding-top: 1rem;
   border: 1px solid #bbbbbb;
-  border-radius: 3px;
+  border-radius: 2px;
   background: #fff;
+}
+.tab .cell-full {
+  border: 1px dashed #e0e0e0;
 }
 .tab .img-responsive {
   width: 100%;
@@ -1061,10 +1064,15 @@ h3:hover {
   -o-transition: transform 0.2s;
   -webkit-transition: transform 0.2s;
   transition: transform 0.2s;
+  border-radius: 2px;
+  position: relative;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 .tab .img-responsive:hover {
-  transform: scale(1.05, 1.05);
+  transform: translateY(-50%) scale(1.05, 1.05);
 }
 
 @media screen and (min-width: 768px) {
