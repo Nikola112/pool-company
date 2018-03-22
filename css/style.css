@@ -703,6 +703,10 @@ a {
   width: 100%;
 }
 
+#main.gallery {
+  background: #e7ecef;
+}
+
 #cover {
   position: relative;
   overflow: hidden;
@@ -991,6 +995,76 @@ h3:hover {
 
 .img-blur {
   filter: blur(5px) contrast(120%);
+}
+
+#gallery {
+  color: #000;
+}
+
+#gallery-nav {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#gallery-nav h2 {
+  color: #495867;
+}
+
+.tabs {
+  list-style: none;
+  display: flex;
+}
+.tabs li {
+  position: relative;
+  border-radius: 3px 3px 0px 0px;
+}
+.tabs li .w-100 {
+  position: absolute;
+  bottom: -2px;
+  display: none;
+}
+.tabs li .tab-btn {
+  border: 0px none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 100px;
+  text-align: center;
+  min-height: 100%;
+  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
+}
+.tabs .selected-tab {
+  border: 1px solid #bbbbbb;
+  border-bottom: none;
+  background: #fff;
+}
+.tabs .selected-tab .w-100 {
+  display: block;
+  height: 4px;
+  background: #fff;
+}
+.tabs .selected-tab .tab-btn {
+  color: #495867;
+}
+
+.tab {
+  padding: 2rem;
+  padding-top: 1rem;
+  border: 1px solid #bbbbbb;
+  border-radius: 3px;
+  background: #fff;
+}
+.tab .img-responsive {
+  width: 100%;
+  -moz-transition: transform 0.2s;
+  -o-transition: transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.tab .img-responsive:hover {
+  transform: scale(1.05, 1.05);
 }
 
 @media screen and (min-width: 768px) {

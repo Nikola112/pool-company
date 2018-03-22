@@ -95,6 +95,11 @@ a
     width: 100%;
 }
 
+#main.gallery
+{
+    background: $info-color;
+}
+
 #cover
 {
     position: relative;
@@ -458,6 +463,95 @@ h3
 .img-blur
 {
     filter: blur(5px) contrast(120%);
+}
+
+#gallery
+{
+    color: #000;
+}
+
+#gallery-nav
+{
+    display: flex;
+    flex-wrap: nowrap;
+
+    h2
+    {
+        color: $highlight-color;
+    }
+}
+
+.tabs
+{
+    list-style: none;
+    display: flex;
+
+    li
+    {
+        position: relative;
+        border-radius: 3px 3px 0px 0px;
+
+        .w-100
+        {
+            position: absolute;
+            bottom: -2px;
+            display: none;
+        }
+
+        .tab-btn
+        {
+            border: 0px none;
+            outline: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            width: 100px;
+            text-align: center;
+            min-height: 100%;
+            background: transparent;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .selected-tab
+    {
+        border: 1px solid #bbbbbb;
+        border-bottom: none;
+        background: #fff;
+
+        .w-100
+        {
+            display: block;
+            height: 4px;
+            background: #fff;
+        }
+
+        .tab-btn
+        {
+            color: $highlight-color;
+        }
+    }
+}
+
+.tab
+{
+    padding: 2rem;
+    padding-top: 1rem;
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
+    background: #fff;
+
+    .img-responsive
+    {
+        width: 100%;
+        @include transition(transform 0.2s);
+        cursor: pointer;
+
+        &:hover
+        {
+            transform: scale(1.05, 1.05);
+        }
+    }
 }
 
 // tablets
