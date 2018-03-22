@@ -880,20 +880,103 @@ h3:hover {
   margin: 0px auto;
   top: 50%;
   transform: translateY(-50%);
-  width: 180px;
-  padding: 0.75rem;
+  width: 140px;
+  padding: 0.5rem;
+  font-size: 14px;
+  font-weight: bold;
   text-align: center;
-  background-color: #386fa4;
-  -moz-transition: background-color 0.3s, box-shadow 0.3s;
-  -o-transition: background-color 0.3s, box-shadow 0.3s;
-  -webkit-transition: background-color 0.3s, box-shadow 0.3s;
-  transition: background-color 0.3s, box-shadow 0.3s;
-  border-radius: 6px;
+  background-color: #228cdb;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border-radius: 4px;
   cursor: pointer;
 }
-.offer-overlay .more-info .more-info-btn:hover {
-  background: #228cdb;
-  box-shadow: 0px 0px 16px #e7ecef;
+
+#social-media {
+  background-color: #228cdb;
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.social-media:hover {
+  background-color: #47c2f3;
+}
+
+#footer .cell-full {
+  text-align: center;
+  border-top: 1px dashed rgba(166, 199, 214, 0.7);
+}
+#footer .cell-full:first-child {
+  border-top: 0px none;
+}
+#footer ul {
+  list-style: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+#footer li {
+  margin: 4px 0px;
+}
+#footer li a, #footer li span {
+  color: #228cdb;
+  cursor: pointer;
+}
+#footer li a:hover, #footer li span:hover {
+  text-decoration: underline;
+}
+#footer form {
+  text-align: center;
+}
+#footer input {
+  padding: 0.5rem;
+  color: #228cdb;
+}
+#footer input[type="submit"] {
+  color: #000;
+}
+#footer h3 {
+  font-size: 1.25rem;
+  color: #386fa4;
+  text-decoration: none;
+  cursor: default;
+}
+#footer .container {
+  padding-top: 1rem;
+  color: #000;
+}
+#footer #copyrights {
+  border-top: 1px dashed rgba(166, 199, 214, 0.7);
+  color: #0059ff;
+  padding: 1rem;
+  text-align: center;
+  margin: 0px auto;
+}
+#footer #newsletter {
+  border-top: 1px dashed rgba(166, 199, 214, 0.7);
+}
+#footer #newsletter h3 {
+  text-align: center;
+  padding: 0.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -976,6 +1059,15 @@ h3:hover {
 
   #main {
     padding-top: 0px;
+  }
+
+  #footer .cell-full {
+    border-top: 0px none;
+  }
+  #footer #newsletter h3 {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0px;
   }
 }
 

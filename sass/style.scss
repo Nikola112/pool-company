@@ -319,19 +319,132 @@ h3
             margin: 0px auto;
             top: 50%;
             transform: translateY(-50%);
-            width: 180px;
-            padding: 0.75rem;
+            width: 140px;
+            padding: 0.5rem;
+            font-size: 14px;
+            font-weight: bold;
             text-align: center;
-            background-color: $secondary-color;
-            @include transition(background-color 0.3s, box-shadow 0.3s);
-            border-radius: 6px;
+            background-color: $primary-color;
+            @include transition(background-color 0.3s);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+}
+
+#social-media
+{
+    background-color: $primary-color;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media
+{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+    cursor: pointer;
+    @include transition(background-color 0.3s);
+
+    &:hover
+    {
+        background-color: $second-gradient-color;
+
+    }
+}
+
+#footer
+{
+    .cell-full
+    {
+        text-align: center;
+        border-top: 1px dashed rgba(166, 199, 214, 0.7);
+    }
+
+    .cell-full:first-child
+    {
+        border-top: 0px none;
+    }
+
+    ul
+    {
+        list-style: none;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    li
+    {
+        margin: 4px 0px;
+
+        a, span
+        {
+            color: $primary-color;
             cursor: pointer;
 
             &:hover
             {
-                background: $primary-color;
-                box-shadow: 0px 0px 16px $info-color;
+                text-decoration: underline;
             }
+        }
+    }
+
+    form
+    {
+        text-align: center;
+    }
+
+    input
+    {
+        padding: 0.5rem;
+        color: $primary-color;
+    }
+
+    input[type="submit"]
+    {
+        color: #000;
+    }
+
+    h3
+    {
+        font-size: 1.25rem;
+        color: $secondary-color;
+        text-decoration: none;
+        cursor: default;
+    }
+
+    .container
+    {
+        padding-top: 1rem;
+        color: #000;
+    }
+
+    #copyrights
+    {
+        border-top: 1px dashed rgba(166, 199, 214, 0.7);
+        color: #0059ff;
+        padding: 1rem;
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    #newsletter
+    {
+        border-top: 1px dashed rgba(166, 199, 214, 0.7);
+
+        h3
+        {
+            text-align: center;
+            padding: 0.5rem;
         }
     }
 }
@@ -446,5 +559,23 @@ h3
     #main
     {
         padding-top: 0px;
+    }
+
+    #footer
+    {
+        .cell-full
+        {
+            border-top: 0px none;
+        }
+
+        #newsletter
+        {
+            h3
+            {
+                display: inline-block;
+                margin-right: 1rem;
+                padding: 0px;
+            }
+        }
     }
 }
