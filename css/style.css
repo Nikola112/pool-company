@@ -665,10 +665,10 @@ a {
   top: 76px;
   left: 0px;
   width: 40%;
-  -moz-transition: left 0.3s ease;
-  -o-transition: left 0.3s ease;
-  -webkit-transition: left 0.3s ease;
-  transition: left 0.3s ease;
+  -moz-transition: left 0.4s cubic-bezier(0.12, 0.88, 0.35, 1);
+  -o-transition: left 0.4s cubic-bezier(0.12, 0.88, 0.35, 1);
+  -webkit-transition: left 0.4s cubic-bezier(0.12, 0.88, 0.35, 1);
+  transition: left 0.4s cubic-bezier(0.12, 0.88, 0.35, 1);
 }
 .navbar .navbar-logo {
   margin-left: auto;
@@ -965,6 +965,7 @@ h3:hover {
   color: #228cdb;
 }
 #footer input[type="submit"] {
+  margin-top: 8px;
   color: #000;
 }
 #footer h3 {
@@ -978,12 +979,11 @@ h3:hover {
   color: #000;
 }
 #footer #copyrights {
-  border-top: 1px dashed rgba(166, 199, 214, 0.7);
   color: #fff;
   padding: 1rem;
   text-align: center;
   margin: 0px auto;
-  background: linear-gradient(#386fa4, #228cdb);
+  background: #386fa4, #228cdb;
 }
 #footer #newsletter {
   border-top: 1px dashed rgba(166, 199, 214, 0.7);
@@ -994,7 +994,7 @@ h3:hover {
 }
 
 .img-blur {
-  filter: blur(5px) contrast(120%);
+  filter: blur(2px);
 }
 
 #gallery {
@@ -1003,19 +1003,26 @@ h3:hover {
 
 #gallery-nav {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #gallery-nav h2 {
   color: #495867;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
 }
 
 .tabs {
   list-style: none;
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .tabs li {
   position: relative;
   border-radius: 2px 2px 0px 0px;
+  width: 30%;
 }
 .tabs li .w-100 {
   position: absolute;
@@ -1027,12 +1034,19 @@ h3:hover {
   outline: none;
   cursor: pointer;
   padding: 0.5rem;
-  width: 100px;
+  width: 100%;
   text-align: center;
   min-height: 100%;
   background: transparent;
   font-size: 16px;
   font-weight: bold;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.tabs li .tab-btn:hover {
+  color: #228cdb;
 }
 .tabs .selected-tab {
   border: 1px solid #bbbbbb;
@@ -1060,10 +1074,10 @@ h3:hover {
 }
 .tab .img-responsive {
   width: 100%;
-  -moz-transition: transform 0.2s;
-  -o-transition: transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  transition: transform 0.2s;
+  -moz-transition: transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
+  -webkit-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
   border-radius: 2px;
   position: relative;
   display: block;
@@ -1082,6 +1096,30 @@ h3:hover {
 
   .navbar .nav {
     top: 78px;
+  }
+
+  #gallery-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  #gallery-nav h2 {
+    color: #495867;
+    margin-bottom: 0px;
+    width: auto;
+    text-align: left;
+  }
+
+  .tabs {
+    margin-left: auto;
+    width: auto;
+  }
+  .tabs li {
+    width: 100px;
+  }
+
+  #footer input[type="submit"] {
+    margin-top: 0px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1172,6 +1210,9 @@ h3:hover {
 
   #footer .cell-full {
     border-top: 0px none;
+  }
+  #footer input[type="submit"] {
+    margin-top: 0px;
   }
   #footer #newsletter h3 {
     display: inline-block;
