@@ -1118,6 +1118,13 @@ h3:hover {
     width: 100px;
   }
 
+  .tab .row {
+    justify-content: space-between;
+  }
+  .tab .cell-sm-half {
+    width: 49%;
+  }
+
   #footer input[type="submit"] {
     margin-top: 0px;
   }
@@ -1218,6 +1225,10 @@ h3:hover {
     display: inline-block;
     margin-right: 1rem;
     padding: 0px;
+  }
+
+  .tab .cell-lg-quarter {
+    width: 24%;
   }
 }
 

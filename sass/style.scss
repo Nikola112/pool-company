@@ -619,6 +619,19 @@ h3
         }
     }
 
+    .tab
+    {
+        .row
+        {
+            justify-content: space-between;
+        }
+
+        .cell-sm-half
+        {
+            width: 49%;
+        }
+    }
+
     #footer
     {
         input[type="submit"]
@@ -766,6 +779,14 @@ h3
                 margin-right: 1rem;
                 padding: 0px;
             }
+        }
+    }
+
+    .tab
+    {
+        .cell-lg-quarter
+        {
+            width: 24%;
         }
     }
 }
