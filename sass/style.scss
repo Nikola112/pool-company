@@ -95,7 +95,7 @@ a
     width: 100%;
 }
 
-#main.gallery
+#main.other-page
 {
     background: $info-color;
 }
@@ -129,11 +129,6 @@ a
 #cover-content h1
 {
     font-size: 2rem;
-}
-
-.gallery #cover-content h1
-{
-    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
 }
 
 .big-text
@@ -171,21 +166,21 @@ a
 
 .number-circle
 {
-    min-width: 128px;
-    height: 128px;
+    min-width: 48px;
+    height: 48px;
     text-align: center;
-    font-size: 32px;
-    line-height: 40px;
-    padding: 40px 0px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 15px 0px;
     color: rgba(101, 137, 151, 0.33);
-    border: 4px solid rgba(101, 137, 151, 0.33);
+    border: 2px solid rgba(101, 137, 151, 0.33);
     border-radius: 50%;
     cursor: default;
     @include transition(border-color 0.3s, background-color 0.3s, color 0.3s);
 
     &:hover
     {
-        border: 4px solid $primary-color;
+        border: 2px solid $primary-color;
         background-color: $primary-color;
         color: #fff;
     }
@@ -460,14 +455,17 @@ h3
     }
 }
 
-.img-blur
-{
-    filter: blur(2px);
-}
-
 #gallery
 {
     color: #000;
+
+    .tab
+    {
+        .cell-full
+        {
+            border: 1px dashed #e0e0e0;
+        }
+    }
 }
 
 #gallery-nav
@@ -554,11 +552,6 @@ h3
     border-radius: 2px;
     background: #fff;
 
-    .cell-full
-    {
-        border: 1px dashed #e0e0e0;
-    }
-
     .img-responsive
     {
         width: 100%;
@@ -577,6 +570,61 @@ h3
     }
 }
 
+#contact
+{
+    color: $highlight-color;
+}
+
+#contact h2
+{
+    color: #214d72;
+    font-weight: 200;
+}
+
+#contact input
+{
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+#contact-form
+{
+    width: 100%;
+}
+
+.full-line
+{
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.color-red
+{
+    color: #ff2904;
+    font-weight: bolder;
+}
+
+.text-box
+{
+    border: 1px solid #bdbdbd;
+    color: $highlight-color;
+    outline: none;
+    border-radius: 2px;
+    @include transition(box-shadow 0.3s);
+
+    &:focus
+    {
+        box-shadow: 0px 0px 4px $primary-color;
+    }
+}
+
+.contact-right
+{
+    margin-top: 1rem;
+}
+
 // tablets
 @media screen and (min-width: 768px)
 {
@@ -590,6 +638,21 @@ h3
         .nav
         {
             top: 78px;
+        }
+    }
+
+    .number-circle
+    {
+        min-width: 128px;
+        height: 128px;
+        font-size: 32px;
+        line-height: 40px;
+        padding: 40px 0px;
+        border: 4px solid rgba(101, 137, 151, 0.33);
+
+        &:hover
+        {
+            border: 4px solid $primary-color;
         }
     }
 
@@ -680,7 +743,7 @@ h3
         }
     }
 
-    #main-navigation.gallery
+    #main-navigation.other-page
     {
         height: 80px;
         background: #fff;
@@ -754,7 +817,7 @@ h3
         padding-top: 0px;
     }
 
-    #main.gallery
+    #main.other-page
     {
         padding-top: 80px;
     }
@@ -788,5 +851,21 @@ h3
         {
             width: 24%;
         }
+    }
+
+    #contact-form
+    {
+        width: 70%;
+    }
+
+    .contact-right
+    {
+        padding-left: 1.5rem;
+        margin-top: 0px;
+    }
+
+    .contact-left
+    {
+        padding-right: 1.5rem;
     }
 }
