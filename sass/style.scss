@@ -712,9 +712,13 @@ h3
     border-top: 1px dashed #bbbbbb;
     width: 100%;
 
-    #social-media
+    #social-media-contact
     {
-        padding-left: 0px;
+        width: 100%;
+        padding: 8px 8px 8px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: transparent;
         flex-wrap: wrap;
     }
@@ -1089,7 +1093,7 @@ h3
         border-top: 0px none;
         width: 30%;
 
-        #social-media
+        #social-media-contact
         {
             justify-content: flex-start;
         }
