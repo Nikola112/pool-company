@@ -64,21 +64,28 @@
                         
                             <p class="mb-4">Even if there is something you have always wanted to have and can't find it in our offers, let us know and we promise we'll do our best to find a solution for you.</p>
                         
-                            <div class="row">
-                                <div class="cell-full cell-lg-half contact-left">
-                                    <label>
-                                        <span class="full-line">NAME:&nbsp;<span class="color-red">*</span></span>
-                                        <input type="text" name="tbName" id="tbName" class="text-box" />
-                                    </label>
+                            <form action="contact.php" method="POST">
+                                <div class="row">
+                                    <div class="cell-full cell-lg-half contact-left">
+                                        <label>
+                                            <span class="full-line">NAME:&nbsp;<span class="color-red">*</span></span>
+                                            <input type="text" name="tbName" id="tbName" class="text-box" />
+                                        </label>
+                                    </div>
+
+                                    <div class="cell-full cell-lg-half contact-right">
+                                        <label>
+                                            <span class="full-line">EMAIL:&nbsp;<span class="color-red">*</span></span>
+                                            <input type="text" name="tbMail" id="tbMail" class="text-box" />
+                                        </label>
+                                    </div>
                                 </div>
 
-                                <div class="cell-full cell-lg-half contact-right">
-                                    <label>
-                                        <span class="full-line">EMAIL:&nbsp;<span class="color-red">*</span></span>
-                                        <input type="text" name="tbMail" id="tbMail" class="text-box" />
-                                    </label>
-                                </div>
-                            </div>
+                                <span class="full-line mt-2">EMAIL:&nbsp;<span class="color-red">*</span></span>
+                                <textarea name="text" id="text-area" cols="50" rows="12" class="textarea-field"></textarea>
+
+                                <input type="submit" value="SEND" class="ml-auto mt-1" />
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -160,7 +167,7 @@
                         </h3>
 
                         <form action="search.php" method="post" class="mt-5">
-                            <input type="search" name="tbSearch" id="tbSearch" placeholder="Search..." />
+                            <input type="search" name="tbSearch" id="tbSearch" placeholder="Search..." class="text-box" />
                             <input type="submit" value="Search" />
                         </form>
                     </div>
@@ -191,7 +198,7 @@
             <div id="newsletter" class="py-3">
                 <form action="newsletter.php" method="POST">
                     <h3>NEWSLETTER</h3>
-                    <input type="text" name="tbNewsletter" id="tbNewsletter" placeholder="Your Email Adress" />
+                    <input type="text" name="tbNewsletter" id="tbNewsletter" placeholder="Your Email Adress" class="text-box" />
                     <input type="submit" value="SIGN UP" />
                 </form>
             </div>

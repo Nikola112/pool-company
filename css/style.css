@@ -1096,6 +1096,25 @@ h3:hover {
   width: 100%;
 }
 
+#contact input[type="submit"] {
+  width: auto;
+  font-weight: bold;
+  padding: 12px 48px;
+  font-size: 14px;
+  background-color: #228cdb;
+  outline: none;
+  border: 0px none;
+  border-radius: 2px;
+  cursor: pointer;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+#contact input[type="submit"]:hover {
+  background-color: #47c2f3;
+}
+
 #contact-form {
   width: 100%;
 }
@@ -1127,6 +1146,23 @@ h3:hover {
 
 .contact-right {
   margin-top: 1rem;
+}
+
+.textarea-field {
+  padding: 0.5rem;
+  resize: vertical;
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  color: #495867;
+  outline: none;
+  border-radius: 2px;
+  -moz-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+}
+.textarea-field:focus {
+  box-shadow: 0px 0px 4px #228cdb;
 }
 
 @media screen and (min-width: 768px) {

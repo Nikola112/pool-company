@@ -588,6 +588,25 @@ h3
     width: 100%;
 }
 
+#contact input[type="submit"]
+{
+    width: auto;
+    font-weight: bold;
+    padding: 12px 48px;
+    font-size: 14px;
+    background-color: $primary-color;
+    outline: none;
+    border: 0px none;
+    border-radius: 2px;
+    cursor: pointer;
+    @include transition(background-color 0.3s);
+
+    &:hover
+    {
+        background-color: $second-gradient-color;
+    }
+}
+
 #contact-form
 {
     width: 100%;
@@ -623,6 +642,23 @@ h3
 .contact-right
 {
     margin-top: 1rem;
+}
+
+.textarea-field
+{
+    padding: 0.5rem;
+    resize: vertical;
+    width: 100%;
+    border: 1px solid #bdbdbd;
+    color: $highlight-color;
+    outline: none;
+    border-radius: 2px;
+    @include transition(box-shadow 0.3s);
+
+    &:focus
+    {
+        box-shadow: 0px 0px 4px $primary-color;
+    }
 }
 
 // tablets
