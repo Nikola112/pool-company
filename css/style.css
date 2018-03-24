@@ -1077,6 +1077,7 @@ h3:hover {
   border: 1px solid #bbbbbb;
   border-radius: 2px;
   background: #fff;
+  color: #495867;
 }
 .tab .img-responsive {
   width: 100%;
@@ -1239,6 +1240,46 @@ h3:hover {
 
 #about-me-info {
   text-align: center;
+}
+
+#register input {
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+}
+#register input[type="submit"] {
+  font-weight: bold;
+  padding: 12px 48px;
+  font-size: 14px;
+  background-color: #228cdb;
+  display: block;
+  outline: none;
+  border: 0px none;
+  border-radius: 2px;
+  cursor: pointer;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+#register input[type="submit"]:hover {
+  background-color: #47c2f3;
+}
+
+.sign-in-icon {
+  background-color: #c1c1c1;
+  border-radius: 50%;
+  font-size: 108px;
+  width: 108px;
+  height: 108px;
+  overflow: hidden;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.border-t-sm {
+  border-top: 1px dashed #bbbbbb;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -1436,6 +1477,11 @@ h3:hover {
 
   .cell-lg-75 {
     width: 75%;
+  }
+
+  .border-t-sm {
+    border-top: 0px none;
+    margin-top: 0px;
   }
 }
 

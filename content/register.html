@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8" />
 
-        <title>Pool Desire | About me</title>
+        <title>Pool Desire | Register</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Nikola Jovic" />
-        <meta name="keywords" content="pool, about, author" />
-        <meta name="description" content="This page is about author." />
+        <meta name="keywords" content="pool, login, signin, register, signup" />
+        <meta name="description" content="This is registration page." />
 
         <link rel="shortcut icon" href="../img/logo.png" />
 
@@ -36,57 +36,45 @@
                         <li class="nav-item"><a href="gallery.html" class="link">Gallery</a></li>
                         <li class="nav-item"><span class="link">Services</span></li>
                         <li class="nav-item"><a href="contact.html" class="link">Contact</a></li>
-                        <li class="nav-item active"><a href="aboutme.html" class="link">About Me</a></li>
-                        <li class="nav-item"><a href="register.html" class="link">Sign In</a></li>
+                        <li class="nav-item"><a href="aboutme.html" class="link">About Me</a></li>
+                        <li class="nav-item active"><a href="register.html" class="link">Sign In</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         
         <div id="main" class="other-page pb-5">
-            <div id="about-me" class="container p-4">
+            <div id="register" class="container p-4">
                 <div class="tab">
-                    <h1 class="mb-5 ml-2 pl-2">ABOUT ME</h1>
+                    <h1 class="mb-5">SIGN IN OR REGISTER</h1>
 
                     <div class="row">
-                        <div class="cell-full cell-lg-quarter p-2">
-                            <img src="../img/author.jpg" alt="Author" class="w-100" />
+                        <div class="cell-full cell-lg-half p-4">
+                            <h2 class="mb-3">SIGN IN</h2>
+
+                            <div class="sign-in-icon mx-auto">
+                                <span class="fa fa-user" aria-hidden="true"></span>
+                            </div>
+
+                            <form action="login.php" method="post" class="mt-3">
+                                <input type="text" placeholder="Username or email" class="text-box mb-2" />
+                                <input type="password" placeholder="Password" class="text-box mb-2" />
+                                <input type="submit" value="Sign in" />
+                            </form>
                         </div>
 
-                        <div id="about-me-info" class="cell-full cell-lg-75 p-2">
-                            <p>Hi, my name is Nikola Jović. I finished "Gimnazija u Obrenovcu" high school. I am self taught Unity C# Developer and I am now studying to become Web Developer at "Visoka ICT Škola". In free time I program games and play them.</p>
+                        <div class="cell-full cell-lg-half p-4 border-t-sm">
+                            <h2>REGISTER</h2>
 
-                            <div class="row mt-2">
-                                <div class="cell-full cell-sm-half cell-lg-third mt-4">
-                                    <h2>BIRTHPLACE</h2>
-                                    <p class="about-info">Belgrade, Serbia</p>
-                                </div>
-
-                                <div class="cell-full cell-sm-half cell-lg-third mt-4">
-                                    <h2>RESIDENCE</h2>
-                                    <p class="about-info">Obrenovac, Serbia</p>
-                                </div>
-
-                                <div class="cell-full cell-sm-half cell-lg-third mt-4">
-                                    <h2>HOBBIES</h2>
-                                    <p class="about-info">Games, Anime, Programming</p>
-                                </div>
-
-                                <div class="cell-full cell-sm-half cell-lg-third mt-4">
-                                    <h2>BORN</h2>
-                                    <p class="about-info">19.02.1998</p>
-                                </div>
-
-                                <div class="cell-full cell-sm-half cell-lg-third mt-4">
-                                    <h2>EMAIL</h2>
-                                    <a href="mailto:nikola.jovic.100.17@ict.edu.rs" >nikola.jovic.100.17@ict.edu.rs</a>
-                                </div>
-
-                                <div class="cell-full cell-sm-half cell-lg-third mt-4">
-                                    <h2>GITHUB</h2>
-                                    <a href="https://github.com/Nikola112" >GitHub</a>
-                                </div>
-                            </div>
+                            <form action="register.php" method="post" class="mt-3">
+                                <input type="text" placeholder="First name" class="text-box mb-2" />
+                                <input type="text" placeholder="Last name" class="text-box mb-2" />
+                                <input type="text" placeholder="Username" class="text-box mb-2" />
+                                <input type="email" placeholder="Email" class="text-box mb-2" />
+                                <input type="password" placeholder="Password" class="text-box mb-2" />
+                                <input type="password" placeholder="Repeat password" class="text-box mb-2"/>
+                                <input type="submit" value="Register" />
+                            </form>
                         </div>
                     </div>
                 </div>

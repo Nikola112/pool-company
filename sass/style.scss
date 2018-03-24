@@ -564,6 +564,7 @@ h3
     border: 1px solid #bbbbbb;
     border-radius: 2px;
     background: #fff;
+    color: $highlight-color;
 
     .img-responsive
     {
@@ -766,6 +767,53 @@ h3
 #about-me-info
 {
     text-align: center;
+}
+
+#register
+{
+    input
+    {
+        display: block;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    input[type="submit"]
+    {
+        font-weight: bold;
+        padding: 12px 48px;
+        font-size: 14px;
+        background-color: $primary-color;
+        display: block;
+        outline: none;
+        border: 0px none;
+        border-radius: 2px;
+        cursor: pointer;
+        @include transition(background-color 0.3s);
+
+        &:hover
+        {
+            background-color: $second-gradient-color;
+        }
+    }
+}
+
+.sign-in-icon
+{
+    background-color: #c1c1c1;
+    border-radius: 50%;
+    font-size: 108px;
+    width: 108px;
+    height: 108px;
+    overflow: hidden;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.border-t-sm
+{
+    border-top: 1px dashed #bbbbbb;
+    margin-top: 2rem;
 }
 
 // tablets
@@ -1061,5 +1109,11 @@ h3
     .cell-lg-75
     {
         width: 75%;
+    }
+
+    .border-t-sm
+    {
+        border-top: 0px none;
+        margin-top: 0px;
     }
 }
