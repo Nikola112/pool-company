@@ -120,6 +120,11 @@ $zero: 0;
     width: 100%;
 }
 
+.w-100
+{
+    width: 100%;
+}
+
 $count: 1;
 @each $name in $cell-names
 {
@@ -129,11 +134,6 @@ $count: 1;
     }
 
     $count: $count + 1;
-}
-
-.w-100
-{
-    width: 100%;
 }
 
 .img-responsive

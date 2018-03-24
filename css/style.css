@@ -379,6 +379,10 @@
   width: 100%;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .cell-full {
   width: 100%;
 }
@@ -393,10 +397,6 @@
 
 .cell-quarter {
   width: 25%;
-}
-
-.w-100 {
-  width: 100%;
 }
 
 .img-responsive {
@@ -1215,6 +1215,32 @@ h3:hover {
   color: #fcfcfc;
 }
 
+#about-me {
+  color: #495867;
+}
+#about-me h1 {
+  border-left: 8px solid #e7ecef;
+}
+#about-me h2 {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+#about-me .about-info {
+  font-size: 14px;
+  padding-top: 0.25rem;
+}
+#about-me a {
+  font-size: 14px;
+  color: #495867;
+}
+#about-me img {
+  border: 8px solid #e7ecef;
+}
+
+#about-me-info {
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   html {
     font-size: 14px;
@@ -1261,6 +1287,14 @@ h3:hover {
   }
   .tab .cell-sm-half {
     width: 49%;
+  }
+
+  #about-me .tab .cell-sm-half {
+    width: 50%;
+  }
+
+  #about-me-info {
+    text-align: left;
   }
 
   #footer input[type="submit"] {
@@ -1369,6 +1403,13 @@ h3:hover {
     width: 24%;
   }
 
+  #about-me .tab .cell-lg-quarter {
+    width: 25%;
+  }
+  #about-me .tab .cell-lg-third {
+    width: 33.3333333333%;
+  }
+
   #contact-form {
     width: 70%;
   }
@@ -1391,6 +1432,10 @@ h3:hover {
 
   .contact-left {
     padding-right: 1.5rem;
+  }
+
+  .cell-lg-75 {
+    width: 75%;
   }
 }
 

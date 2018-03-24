@@ -730,6 +730,44 @@ h3
     }
 }
 
+#about-me
+{
+    color: $highlight-color;
+
+    h1
+    {
+        border-left: 8px solid $info-color;
+    }
+
+    h2
+    {
+        font-weight: bold;
+        font-size: 1.125rem;
+    }
+
+    .about-info
+    {
+        font-size: 14px;
+        padding-top: 0.25rem;
+    }
+
+    a
+    {
+        font-size: 14px;
+        color: $highlight-color;
+    }
+
+    img
+    {
+        border: 8px solid $info-color;
+    }
+}
+
+#about-me-info
+{
+    text-align: center;
+}
+
 // tablets
 @media screen and (min-width: 768px)
 {
@@ -798,6 +836,22 @@ h3
         {
             width: 49%;
         }
+    }
+
+    #about-me
+    {
+        .tab
+        {
+            .cell-sm-half
+            {
+                width: 50%;
+            }
+        }
+    }
+
+    #about-me-info
+    {
+        text-align: left;
     }
 
     #footer
@@ -958,6 +1012,22 @@ h3
         }
     }
 
+    #about-me
+    {
+        .tab
+        {
+            .cell-lg-quarter
+            {
+                width: 25%;
+            }
+
+            .cell-lg-third
+            {
+                width: 33.3333333333%;
+            }
+        }
+    }
+
     #contact-form
     {
         width: 70%;
@@ -986,5 +1056,10 @@ h3
     .contact-left
     {
         padding-right: 1.5rem;
+    }
+
+    .cell-lg-75
+    {
+        width: 75%;
     }
 }
