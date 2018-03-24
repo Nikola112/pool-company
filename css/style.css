@@ -913,6 +913,7 @@ h3:hover {
 }
 
 .social-media {
+  min-width: 40px;
   width: 40px;
   height: 40px;
   text-align: center;
@@ -962,7 +963,20 @@ h3:hover {
 }
 #footer input[type="submit"] {
   margin-top: 8px;
-  color: #000;
+  border: 2px solid #228cdb;
+  color: #fff;
+  background-color: #228cdb;
+  outline: none;
+  border: 0px none;
+  border-radius: 2px;
+  cursor: pointer;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+#footer input[type="submit"]:hover {
+  background-color: #47c2f3;
 }
 #footer h3 {
   font-size: 1.25rem;
@@ -1084,18 +1098,14 @@ h3:hover {
 #contact {
   color: #495867;
 }
-
 #contact h2 {
-  color: #214d72;
   font-weight: 200;
 }
-
 #contact input {
   display: block;
   padding: 0.5rem;
   width: 100%;
 }
-
 #contact input[type="submit"] {
   width: auto;
   font-weight: bold;
@@ -1114,9 +1124,26 @@ h3:hover {
 #contact input[type="submit"]:hover {
   background-color: #47c2f3;
 }
+#contact h3 {
+  cursor: default;
+}
+#contact h3:hover {
+  text-decoration: none;
+}
+#contact .color-blue {
+  color: #214d72;
+}
 
 #contact-form {
   width: 100%;
+}
+
+.contact-info-info {
+  font-weight: bold;
+}
+
+.contact-link {
+  cursor: pointer;
 }
 
 .full-line {
@@ -1128,6 +1155,9 @@ h3:hover {
 .color-red {
   color: #ff2904;
   font-weight: bolder;
+}
+.color-red:hover {
+  color: #ff2904;
 }
 
 .text-box {
@@ -1163,6 +1193,26 @@ h3:hover {
 }
 .textarea-field:focus {
   box-shadow: 0px 0px 4px #228cdb;
+}
+
+#contact-info {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  text-align: center;
+  border-top: 1px dashed #bbbbbb;
+  width: 100%;
+}
+#contact-info #social-media {
+  padding-left: 0px;
+  background: transparent;
+  flex-wrap: wrap;
+}
+#contact-info .social-media {
+  display: block;
+}
+#contact-info .social-media:hover {
+  background: #ff2904;
+  color: #fcfcfc;
 }
 
 @media screen and (min-width: 768px) {
@@ -1321,6 +1371,17 @@ h3:hover {
 
   #contact-form {
     width: 70%;
+  }
+
+  #contact-info {
+    margin-top: 0px;
+    padding-top: 0px;
+    text-align: left;
+    border-top: 0px none;
+    width: 30%;
+  }
+  #contact-info #social-media {
+    justify-content: flex-start;
   }
 
   .contact-right {

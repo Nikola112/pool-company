@@ -349,6 +349,7 @@ h3
 
 .social-media
 {
+    min-width: 40px;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -417,7 +418,19 @@ h3
     input[type="submit"]
     {
         margin-top: 8px;
-        color: #000;
+        border: 2px solid $primary-color;
+        color: #fff;
+        background-color: $primary-color;
+        outline: none;
+        border: 0px none;
+        border-radius: 2px;
+        cursor: pointer;
+        @include transition(background-color 0.3s);
+
+        &:hover
+        {
+            background-color: $second-gradient-color;
+        }
     }
 
     h3
@@ -573,43 +586,67 @@ h3
 #contact
 {
     color: $highlight-color;
-}
 
-#contact h2
-{
-    color: #214d72;
-    font-weight: 200;
-}
-
-#contact input
-{
-    display: block;
-    padding: 0.5rem;
-    width: 100%;
-}
-
-#contact input[type="submit"]
-{
-    width: auto;
-    font-weight: bold;
-    padding: 12px 48px;
-    font-size: 14px;
-    background-color: $primary-color;
-    outline: none;
-    border: 0px none;
-    border-radius: 2px;
-    cursor: pointer;
-    @include transition(background-color 0.3s);
-
-    &:hover
+    h2
     {
-        background-color: $second-gradient-color;
+        font-weight: 200;
+    }
+
+    input
+    {
+        display: block;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    input[type="submit"]
+    {
+        width: auto;
+        font-weight: bold;
+        padding: 12px 48px;
+        font-size: 14px;
+        background-color: $primary-color;
+        outline: none;
+        border: 0px none;
+        border-radius: 2px;
+        cursor: pointer;
+        @include transition(background-color 0.3s);
+
+        &:hover
+        {
+            background-color: $second-gradient-color;
+        }
+    }
+
+    h3
+    {
+        cursor: default;
+
+        &:hover
+        {
+            text-decoration: none;
+        }
+    }
+
+    .color-blue
+    {
+        color: #214d72;
     }
 }
 
 #contact-form
 {
     width: 100%;
+}
+
+.contact-info-info
+{
+    font-weight: bold;
+}
+
+.contact-link
+{
+    cursor: pointer;
 }
 
 .full-line
@@ -623,6 +660,11 @@ h3
 {
     color: #ff2904;
     font-weight: bolder;
+
+    &:hover
+    {
+        color: #ff2904;
+    }
 }
 
 .text-box
@@ -658,6 +700,33 @@ h3
     &:focus
     {
         box-shadow: 0px 0px 4px $primary-color;
+    }
+}
+
+#contact-info
+{
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    text-align: center;
+    border-top: 1px dashed #bbbbbb;
+    width: 100%;
+
+    #social-media
+    {
+        padding-left: 0px;
+        background: transparent;
+        flex-wrap: wrap;
+    }
+
+    .social-media
+    {
+        display: block;
+
+        &:hover
+        {
+            background: #ff2904;
+            color: $text-color;
+        }
     }
 }
 
@@ -892,6 +961,20 @@ h3
     #contact-form
     {
         width: 70%;
+    }
+
+    #contact-info
+    {
+        margin-top: 0px;
+        padding-top: 0px;
+        text-align: left;
+        border-top: 0px none;
+        width: 30%;
+
+        #social-media
+        {
+            justify-content: flex-start;
+        }
     }
 
     .contact-right
